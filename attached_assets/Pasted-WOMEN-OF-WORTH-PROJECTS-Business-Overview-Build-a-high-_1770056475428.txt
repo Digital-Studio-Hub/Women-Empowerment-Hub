@@ -1,0 +1,276 @@
+WOMEN OF WORTH PROJECTS
+Business Overview
+Build a high-end, credibility-driven online platform for Women of Worth Projects, an online business focused on health products and entrepreneurial empowerment, with the primary goal of introducing people to the business opportunity, not hard-selling products.
+
+Business Name: Women of Worth Projects
+Founder: Sylvia Emma Plaatjies
+Domain to Register: womenofworthprojects.co.za
+Email (to be created): info@wowprojects.co.za
+Contact Number: 067 774 4074
+Business Type: Online shop + business opportunity platform
+
+CORE BUSINESS POSITIONING
+Women of Worth Projects must be positioned as:
+
+A purpose-driven women empowerment brand
+
+A business opportunity and mentorship platform
+
+A values-based health and wellness enterprise
+
+Product sales are secondary.
+Business education, opportunity introduction, and empowerment are primary.
+
+TARGET AUDIENCE
+Women seeking financial independence
+
+Entrepreneurs and side-hustlers
+
+Wellness-focused individuals
+
+Community-driven business builders
+
+Entry-level and growing online entrepreneurs
+
+SITE ARCHITECTURE (SITEMAP)
+Header Navigation
+Home
+
+About the Business
+
+The Opportunity
+
+Products
+
+Empowerment & Resources
+
+Contact
+
+Footer
+Contact details
+
+Privacy Policy
+
+Terms & Conditions
+
+Empowerment disclaimer
+
+Copyright notice
+
+PAGE SPECIFICATIONS
+1. Home Page
+Purpose: Inspire, build trust, and guide exploration.
+
+Hero headline example:
+Empowering Women to Build Sustainable Businesses
+
+Subheading:
+A purpose-driven platform for growth, wellness, and opportunity.
+
+Primary CTAs:
+
+Learn About the Opportunity
+
+Speak to Us
+
+Explore Our Products
+
+Key sections:
+
+Mission & values
+
+Business-first focus
+
+Community empowerment message
+
+Gentle introduction to products
+
+2. About the Business
+Content to include:
+
+Founder story (Sylvia Emma Plaatjies)
+
+Vision and mission
+
+Why Women of Worth Projects exists
+
+Focus on empowerment, education, and ethical business
+
+Tone:
+
+Authentic
+
+Encouraging
+
+Professional
+
+Aspirational
+
+3. The Opportunity (Core Page)
+This is the most important page.
+
+Explain clearly:
+
+What the business opportunity is
+
+Who it is for
+
+How people can grow with the business
+
+Support, mentorship, and guidance available
+
+Ethical, transparent participation (no hype)
+
+CTA:
+
+Book a Conversation
+
+Contact Us to Learn More
+
+4. Products
+Clean product grid
+
+Health products presented professionally
+
+Educational descriptions (benefits, usage)
+
+No aggressive “buy now” pressure
+
+Soft CTAs:
+
+“Learn More”
+
+“Ask About This Product”
+
+Products should support the business, not define it.
+
+5. Empowerment & Resources
+Include:
+
+Business mindset content
+
+Empowerment messaging
+
+Optional blog or articles (SEO-focused)
+
+Encouraging educational tone
+
+6. Contact Page
+Lead-focused and welcoming.
+
+Features:
+
+Contact form:
+
+Name
+
+Email
+
+Phone
+
+Interest (Business / Products / General)
+
+Message
+
+Click-to-call button
+
+WhatsApp-ready contact link (optional)
+
+Email display: info@wowprojects.co.za
+
+DESIGN & UI/UX REQUIREMENTS
+Elegant, feminine, professional aesthetic
+
+White-dominant layout with warm accent colours (soft gold, rose, neutral tones)
+
+Spacious layouts
+
+Strong typography hierarchy
+
+Mobile-first responsive design
+
+No pop-ups or pushy sales elements
+
+This must feel empowering, not salesy.
+
+SEO & CONTENT STRATEGY (HIGH-GRADE)
+SEO-optimised headings and copy
+
+Keywords around:
+
+Women empowerment
+
+Business opportunities
+
+Wellness entrepreneurship
+
+Schema:
+
+Organization
+
+Website
+
+BlogPosting (if used)
+
+Sitemap.xml & robots.txt
+
+Google indexing ready
+
+TECHNICAL REQUIREMENTS
+Fast load speed (<1.5s)
+
+HTTPS + SSL
+
+CMS-based for easy updates
+
+Scalable structure for future growth
+
+Email routing to info@wowprojects.co.za
+
+LEAD GENERATION FEATURES (MANDATORY)
+Contact form
+
+Click-to-call on mobile
+
+Clear CTAs focused on conversation, not checkout
+
+Optional WhatsApp integration
+
+No forced purchases
+
+EXCLUSIONS
+No aggressive upsells
+
+No misleading income claims
+
+No pop-ups
+
+No pressure funnels
+
+No spam tactics
+
+FINAL DELIVERABLES
+Premium empowerment-focused website
+
+Clear business opportunity presentation
+
+Ethical product showcase
+
+SEO-optimised structure
+
+Domain registered and live
+
+Business email created and connected
+
+SUCCESS STANDARD
+The website must:
+
+Build trust immediately
+
+Educate visitors clearly
+
+Encourage meaningful engagement
+
+Support long-term brand growth
+
+Represent a high-class women-led business
