@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppFAB from "@/components/WhatsAppFAB";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Opportunity from "@/pages/Opportunity";
@@ -44,6 +45,7 @@ function App() {
             </main>
             <Footer />
           </div>
+          <WhatsAppFAB />
           <Toaster />
         </TooltipProvider>
       </QueryClientProvider>
