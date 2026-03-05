@@ -3,6 +3,8 @@ import { ArrowRight, Heart, Target, Eye, Users, Award, Sparkles } from "lucide-r
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
+import founderImage from "@assets/WhatsApp_Image_2026-02-03_at_15.49.59_(1)_1772702074570.jpeg";
+import celebrationImage from "@assets/WhatsApp_Image_2026-02-03_at_15.49.59_1772702074571.jpeg";
 
 const coreBeliefs = [
   {
@@ -91,14 +93,17 @@ export default function About() {
             
             <div className="flex justify-center">
               <div className="relative w-full max-w-md">
-                <div className="aspect-square bg-gradient-to-br from-primary/20 via-accent/10 to-transparent rounded-lg flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <Heart className="h-16 w-16 text-primary" />
-                    </div>
-                    <h3 className="font-serif text-xl font-semibold text-foreground">Founder & Visionary</h3>
-                    <p className="text-muted-foreground mt-2">Leading with heart and purpose</p>
-                  </div>
+                <div className="rounded-lg overflow-hidden shadow-lg border border-border">
+                  <img
+                    src={founderImage}
+                    alt="Sylvia Emma Plaatjies, founder of Women of Worth Projects, proudly showcasing wellness products and business materials"
+                    className="w-full h-auto object-cover"
+                    data-testid="img-founder"
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <h3 className="font-serif text-xl font-semibold text-foreground" data-testid="text-founder-title">Founder & Visionary</h3>
+                  <p className="text-muted-foreground mt-1">Leading with heart and purpose</p>
                 </div>
               </div>
             </div>
@@ -175,24 +180,41 @@ export default function About() {
 
       {/* Why We Exist */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-6">
-            Why Women of Worth Projects Exists
-          </h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              We exist because we've seen too many women held back by circumstances, 
-              lack of opportunity, or outdated systems that don't serve them.
-            </p>
-            <p>
-              We believe that with the right education, support, and community, 
-              every woman can build a business that provides financial freedom 
-              while staying true to her values.
-            </p>
-            <p>
-              This isn't about get-rich-quick schemes or aggressive sales tactics. 
-              It's about building something meaningful, sustainable, and genuinely empowering.
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="rounded-lg overflow-hidden shadow-lg border border-border">
+                <img
+                  src={celebrationImage}
+                  alt="Women of Worth team celebrating a milestone achievement together, surrounded by red balloons and business materials"
+                  className="w-full h-auto object-cover"
+                  data-testid="img-celebration"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground text-center mt-3 italic" data-testid="text-celebration-caption">
+                Celebrating milestones together — this is what community-driven success looks like
+              </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-6">
+                Why Women of Worth Projects Exists
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  We exist because we've seen too many women held back by circumstances, 
+                  lack of opportunity, or outdated systems that don't serve them.
+                </p>
+                <p>
+                  We believe that with the right education, support, and community, 
+                  every woman can build a business that provides financial freedom 
+                  while staying true to her values.
+                </p>
+                <p>
+                  This isn't about get-rich-quick schemes or aggressive sales tactics. 
+                  It's about building something meaningful, sustainable, and genuinely empowering.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
