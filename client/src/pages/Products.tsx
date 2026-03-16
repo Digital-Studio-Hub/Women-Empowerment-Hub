@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import promoImage from "@assets/WhatsApp_Image_2026-02-03_at_15.44.43_1773650701858.jpeg";
+import silverPackageImage from "@assets/Packages1_1773651901133.png";
+import silverPackageAltImage from "@assets/Packages2_1773651901133.png";
+import miiraCellImage from "@assets/Packages3_1773651901134.png";
 
 const packages = [
   {
@@ -187,8 +190,79 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Product Values */}
+      {/* Product Showcase */}
       <section className="py-20 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-4" data-testid="text-product-range-heading">
+              The Müracare Product Range
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our packages include premium health-organic products from the Müracare range — 
+              complete, herbal, and natural formulas designed to support your wellbeing.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group" data-testid="product-card-miira-cell">
+              <div className="rounded-lg overflow-hidden shadow-lg border border-border bg-background">
+                <img
+                  src={miiraCellImage}
+                  alt="Miira-Cell+ by Müracare — complete herbal and natural organic formula with Swiss Green Apple Stem Cells, Grape Stem Cells, and antioxidants for cellular repair and immune support"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  data-testid="img-miira-cell"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="font-serif text-xl font-bold text-foreground">Miira-Cell+</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Complete herbal and natural formula with Swiss Green Apple Stem Cells 
+                  and antioxidants. Supports cellular repair and immune health.
+                </p>
+              </div>
+            </div>
+
+            <div className="group" data-testid="product-card-silver-package">
+              <div className="rounded-lg overflow-hidden shadow-lg border border-border bg-background">
+                <img
+                  src={silverPackageImage}
+                  alt="Silver package featuring Miira-Cell+, Miira-Phyll herbal and fruit blends, and Coffeecare wellness coffee — a complete wellness collection"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  data-testid="img-silver-package"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="font-serif text-xl font-bold text-foreground">Silver Package Collection</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  The complete wellness collection including Miira-Cell+, 
+                  Miira-Phyll herbal blends, and Coffeecare wellness coffee.
+                </p>
+              </div>
+            </div>
+
+            <div className="group" data-testid="product-card-full-range">
+              <div className="rounded-lg overflow-hidden shadow-lg border border-border bg-background">
+                <img
+                  src={silverPackageAltImage}
+                  alt="Full Müracare product range — Miira-Cell+ boxes, Miira-Phyll containing herbal and fruit blends, and Coffeecare premium wellness coffee"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  data-testid="img-full-range"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="font-serif text-xl font-bold text-foreground">Full Product Range</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Miira-Cell+, Miira-Phyll, and Coffeecare — non-GMO, natural, 
+                  and organic products with green apple extract and antioxidants.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Values */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-4">
