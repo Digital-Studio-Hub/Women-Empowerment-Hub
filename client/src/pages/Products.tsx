@@ -1,48 +1,72 @@
 import { Link } from "wouter";
-import { ArrowRight, Leaf, Shield, Heart, Sparkles, MessageCircle } from "lucide-react";
+import { ArrowRight, Leaf, Shield, Heart, Sparkles, MessageCircle, CheckCircle, Package, Star, Crown, Gem } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
+import promoImage from "@assets/WhatsApp_Image_2026-02-03_at_15.44.43_1773650701858.jpeg";
 
-const productCategories = [
+const packages = [
   {
-    icon: Leaf,
-    title: "Nutritional Supplements",
-    description: "High-quality vitamins, minerals, and supplements designed to support your overall health and vitality.",
-    products: ["Daily Multivitamins", "Omega-3 Complex", "Vitamin D3", "Immune Support"]
+    icon: Package,
+    name: "Starter",
+    price: "R1,260",
+    boxes: "1 Box",
+    color: "from-secondary/30 to-secondary/10",
+    badge: null,
+    description: "Perfect for getting started on your wellness journey and exploring the business opportunity."
   },
   {
-    icon: Shield,
-    title: "Wellness Essentials",
-    description: "Products that support your body's natural functions and promote long-term wellness.",
-    products: ["Digestive Health", "Energy Boosters", "Sleep Support", "Stress Relief"]
+    icon: Star,
+    name: "Bronze",
+    price: "R2,160",
+    boxes: "2 Boxes",
+    color: "from-amber-100/60 to-amber-50/30",
+    badge: null,
+    description: "A great entry point with more products to share and a stronger foundation for your business."
   },
   {
-    icon: Heart,
-    title: "Personal Care",
-    description: "Gentle, effective personal care products made with quality ingredients you can trust.",
-    products: ["Skin Care Range", "Body Care", "Oral Health", "Personal Hygiene"]
+    icon: Crown,
+    name: "Silver",
+    price: "R10,800",
+    boxes: "10 Boxes",
+    color: "from-slate-200/60 to-slate-100/30",
+    badge: "Popular",
+    description: "For serious entrepreneurs ready to build a thriving business with ample product inventory."
   },
   {
-    icon: Sparkles,
-    title: "Weight Management",
-    description: "Supportive products for those on a wellness journey, designed to complement healthy lifestyle choices.",
-    products: ["Meal Replacements", "Protein Supplements", "Metabolism Support", "Healthy Snacks"]
+    icon: Gem,
+    name: "Gold",
+    price: "R21,600",
+    boxes: "20 Boxes",
+    color: "from-yellow-100/60 to-amber-50/30",
+    badge: "Best Value",
+    description: "The comprehensive package for dedicated entrepreneurs ready to build a sustainable wellness business."
   }
+];
+
+const whyJoin = [
+  "No formal qualifications needed to get started",
+  "Genuine income potential with dedication and effort",
+  "Accessible start-up costs",
+  "Proven support and training system",
+  "Health-organic, quality products",
+  "Global business opportunities",
+  "Flexible lifestyle that works around you",
+  "Meaningful, purpose-driven rewards"
 ];
 
 const productValues = [
   {
     title: "Quality First",
-    description: "We only partner with manufacturers who meet rigorous quality standards."
+    description: "We partner with Revoobit, whose Miira-Cell+ products meet rigorous quality and health standards."
   },
   {
     title: "Science-Backed",
-    description: "Our products are formulated based on nutritional science and research."
+    description: "Organic, health-focused formulations backed by nutritional science and research."
   },
   {
     title: "Ethically Sourced",
-    description: "We prioritize products that are responsibly and sustainably produced."
+    description: "Products that are responsibly and sustainably produced for your peace of mind."
   },
   {
     title: "Transparent Ingredients",
@@ -54,9 +78,9 @@ export default function Products() {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Health & Wellness Products"
-        description="Explore our range of quality health and wellness products including nutritional supplements, personal care, and weight management solutions. Products we believe in and use ourselves."
-        keywords="health products, wellness products, nutritional supplements, vitamins, personal care, weight management"
+        title="Revoobit Packages & Wellness Products"
+        description="Explore Revoobit wellness packages from Women of Worth Projects. Choose from Starter, Bronze, Silver, or Gold packages featuring Miira-Cell+ health-organic products. Low start-up costs, unlimited earning potential."
+        keywords="revoobit packages, miira-cell, health products, wellness packages, starter package, bronze package, silver package, gold package, organic health products"
         canonicalPath="/products"
       />
       {/* Hero Section */}
@@ -65,30 +89,114 @@ export default function Products() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Our Products
+            <span className="inline-block text-sm font-medium text-primary uppercase tracking-wider mb-4" data-testid="text-products-label">
+              Revoobit Packages
             </span>
-            <h1 className="text-4xl sm:text-5xl font-serif font-bold text-foreground leading-tight mb-6">
-              Quality Health & Wellness Products
+            <h1 className="text-4xl sm:text-5xl font-serif font-bold text-foreground leading-tight mb-6" data-testid="text-products-heading">
+              Health-Organic Wellness Products
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We carefully select products that we believe in and use ourselves. 
-              Our focus is on quality, effectiveness, and value — not aggressive sales.
+              Explore Revoobit's Miira-Cell+ range of health-organic products. 
+              Choose the package that aligns with your wellness goals and business aspirations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Product Philosophy */}
+      {/* Why Join Section with Image */}
+      <section className="py-20 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-6" data-testid="text-why-join-heading">
+                Why Join Revoobit?
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Revoobit offers a unique business opportunity centred around health-organic products.
+                Here's why thousands of women are building their future with us:
+              </p>
+              <ul className="space-y-4">
+                {whyJoin.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3" data-testid={`text-why-join-${index}`}>
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-md">
+                <div className="rounded-lg overflow-hidden shadow-lg border border-border">
+                  <img
+                    src={promoImage}
+                    alt="Revoobit business opportunity promotional material featuring Miira-Cell+ wellness products and package details"
+                    className="w-full h-auto object-cover"
+                    data-testid="img-promo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Packages */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-4" data-testid="text-packages-heading">
+              Revoobit Packages
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Choose the package that suits your goals. Every package includes Miira-Cell+ products and full access to our training and support system. Pricing is subject to change — contact us for the latest details.
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {packages.map((pkg, index) => (
+              <Card key={index} className="group hover-elevate border-border bg-card relative overflow-hidden" data-testid={`card-package-${pkg.name.toLowerCase()}`}>
+                {pkg.badge && (
+                  <div className="absolute top-4 right-4">
+                    <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full" data-testid={`badge-${pkg.name.toLowerCase()}`}>
+                      {pkg.badge}
+                    </span>
+                  </div>
+                )}
+                <div className={`h-2 bg-gradient-to-r ${pkg.color}`} />
+                <CardContent className="p-6 text-center">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4 group-hover:bg-primary/15 transition-colors">
+                    <pkg.icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-foreground mb-1" data-testid={`text-package-name-${pkg.name.toLowerCase()}`}>
+                    {pkg.name}
+                  </h3>
+                  <div className="mb-2">
+                    <span className="text-3xl font-bold text-primary" data-testid={`text-package-price-${pkg.name.toLowerCase()}`}>{pkg.price}</span>
+                  </div>
+                  <span className="inline-block px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full mb-4" data-testid={`text-package-boxes-${pkg.name.toLowerCase()}`}>
+                    {pkg.boxes}
+                  </span>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {pkg.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Product Values */}
       <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-4">
-              Our Approach to Products
+              Our Product Promise
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Women of Worth Projects, products support our mission — they don't define it. 
-              We believe in educating about wellness, not pushing sales.
+              At Women of Worth Projects, we stand behind every product we recommend. 
+              Quality and integrity guide everything we do.
             </p>
           </div>
           
@@ -103,74 +211,28 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Product Categories */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-4">
-              Product Categories
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our range of health and wellness products designed to support your journey.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {productCategories.map((category, index) => (
-              <Card key={index} className="group hover-elevate border-border bg-card overflow-hidden">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary flex-shrink-0 group-hover:bg-primary/15 transition-colors">
-                      <category.icon className="h-7 w-7" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
-                        {category.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed mb-4">
-                        {category.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {category.products.map((product, pIndex) => (
-                          <span 
-                            key={pIndex} 
-                            className="inline-block px-3 py-1 bg-muted/50 text-muted-foreground text-sm rounded-full"
-                          >
-                            {product}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How to Get Products */}
+      {/* How to Get Started */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-6">
-                Interested in Our Products?
+                Ready to Get Started?
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   We don't believe in pressure tactics or aggressive upselling. If you're 
-                  interested in learning more about any of our products, we're happy to 
+                  interested in learning more about any of our packages, we're happy to 
                   have a conversation.
                 </p>
                 <p>
-                  Whether you're looking for personal use or curious about how sharing 
-                  these products could become part of a business opportunity, we'll 
-                  provide honest information to help you make the best decision for you.
+                  Whether you're looking for personal wellness products or curious about 
+                  how sharing these products could become your own business opportunity, 
+                  we'll provide honest information to help you make the best decision.
                 </p>
                 <p>
                   Simply reach out, and we'll connect you with someone who can answer 
-                  your questions and share their own experience with the products.
+                  your questions and share their own experience with the products and business.
                 </p>
               </div>
             </div>
@@ -179,15 +241,15 @@ export default function Products() {
               <CardContent className="p-8 text-center">
                 <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
-                  Ask About Products
+                  Ask About Packages
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Have questions about specific products or want to learn more? 
-                  We're here to help with honest, helpful information.
+                  Have questions about which package is right for you? 
+                  We're here to help with honest, no-pressure guidance.
                 </p>
                 <Link href="/contact">
                   <Button data-testid="button-products-ask">
-                    Ask About Products
+                    Enquire Now
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
