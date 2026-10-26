@@ -20,6 +20,8 @@ RUN npm run build
 
 # Stage 3: Production runtime
 FROM node:22-alpine AS runner
+# Refresh trust anchors in the image that serves traffic.
+RUN apk upgrade --no-cache ca-certificates
 WORKDIR /app
 ENV NODE_ENV=production
 # Fallback mock DATABASE_URL to avoid crashes if drizzle is imported on startup
